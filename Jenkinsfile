@@ -13,12 +13,9 @@ stages {
      }
       stage ('security check'){
             steps {
-                  sh ''' 
-                
-                  docker run --rm --entrypoint  trufflehog cloudkats/trufflehog  https://github.com/redashu/devsecopsjava >tr
-                  cat tr
-                 
-                   '''
+                sh 'rm tr || true'
+                sh 'docker run -it --rm --entrypoint  trufflehog cloudkats/trufflehog  https://github.com/redashu/devsecopsjava >tr'
+                sh 'cat tr'
             }
       
       
