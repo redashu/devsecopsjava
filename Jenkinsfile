@@ -29,8 +29,7 @@ stages {
           }
        }
             
-            
-      }
+     
    stage ('Build')
    {
      steps {
