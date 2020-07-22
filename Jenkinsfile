@@ -16,7 +16,7 @@ stages {
             steps {
                   sh ''' 
                   rm  trufflehog ||  true 
-                  docker run -it --rm --entrypoint  trufflehog cloudkats/trufflehog  https://github.com/redashu/devsecopsjava >tr
+                  docker run --rm --entrypoint  trufflehog cloudkats/trufflehog  https://github.com/redashu/devsecopsjava >tr
                   cat tr
                  
                    '''
